@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import SprotsArea from '../SportsArea/SprotsArea';
 import './Home.css'
 
+
 const Home = () => {
     const [sports, setSports] = useState([]);
 

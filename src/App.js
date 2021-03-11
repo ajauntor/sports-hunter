@@ -6,12 +6,31 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import NotFound from "./component/NotFound/NotFound";
 
 
 function App() {
   return (
     <div className="main-div">
-      <Home></Home>
+    <Router>
+      <Switch>
+
+        <Route path="/home" >
+          <Home/>
+        </Route>
+
+        <Route exact path="/" >
+          <Home/>
+        </Route>
+
+        <Route path="*" >
+          <NotFound/>
+        </Route>
+
+
+
+      </Switch>
+    </Router>
     </div>
   );
 }

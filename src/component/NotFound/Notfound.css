@@ -1,0 +1,17 @@
+.not-found{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+.not-found h1{
+    color: rgb(9, 81, 148);
+    text-align: center;
+    padding-top: 150px;
+    font-size: 80px;
+}
+.not-found h3{
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 70px;
+    color: brown;
+}
