@@ -9,9 +9,9 @@ const Home = () => {
     const [sports, setSports] = useState([]);
 
     useEffect(()=> {
-        fetch('https://www.thesportsdb.com/api/v1/json/1/all_leagues.php')
+        fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League')
         .then(response => response.json())
-        .then(data => setSports(data.leagues))
+        .then(data => setSports(data.teams))
     }, [])
 
     return (
