@@ -1,0 +1,4 @@
+.player-area{
+        display: flex;
+        flex-wrap: wrap;
+}

@@ -1,4 +1,5 @@
 import Home from "./component/Home/Home";
+import './App.css'
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,7 +10,7 @@ import {
 
 function App() {
   return (
-    <div>
+    <div className="main-div">
       <Home></Home>
     </div>
   );

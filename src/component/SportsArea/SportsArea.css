@@ -1,0 +1,25 @@
+.sports-area{
+    width: 320px;
+    height: 350px;
+    background-image: linear-gradient(to right top, #104e8b, #07559d, #005cb0, #0063c2, #056ad5);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 3px 2px  #648cb3;
+   
+}
+
+.sports-area h2{
+    color: #101820;
+    text-shadow: 1px 1px 1px rgba(245, 245, 245, 0.616);
+}
+.sports-area h5{
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px black;
+}
+.sports-area:hover{
+    background-image: linear-gradient(to right top, #104e8b, #104e8b, #104e8b, #104e8b, #104e8b);
+}
+
+
