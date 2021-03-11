@@ -7,6 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import NotFound from "./component/NotFound/NotFound";
+import ClubDetail from "./component/ClubDetail/ClubDetail";
 
 
 function App() {
@@ -17,6 +18,10 @@ function App() {
 
         <Route path="/home" >
           <Home/>
+        </Route>
+
+        <Route path="/club/:clubId">
+          <ClubDetail/>
         </Route>
 
         <Route exact path="/" >
