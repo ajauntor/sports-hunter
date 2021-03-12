@@ -39,15 +39,24 @@ const ClubDetail = () => {
                 <p className="setColor"><FontAwesomeIcon icon={faGlobeAmericas} /> Country : {strCountry}</p>
                 <p className="setColor"><FontAwesomeIcon icon={faTransgender} /> Gender : {strGender}</p>
                  
+                
             </div>
             <div className="col-md-4 details">
             <img style={{height:"100px"}} src={strTeamLogo} alt=""/>
             </div>
 
+
+
             <div className="col-md-4 details">
             <img style={{height:"100px", borderRadius:'8px', verticalAlign:'center'}} src={gender} alt=""/>
             </div>
+
+            
       </div>
+
+
+
+
         <div className="description container">
              <p>{strDescriptionEN}</p>
             <p>{strStadiumDescription}</p>
@@ -56,7 +65,6 @@ const ClubDetail = () => {
         <div className="social-link">
 
                 <a className="socials" target="_blank"  href={`https://${strFacebook}`}><img src={website} alt=""/></a>
-
                 <a className="socials" target="_blank"  href={`https://${strTwitter}`}> <img src={twitter} alt=""/></a>
                 <a className="socials" target="_blank"  href={`https://${strYoutube}`}><img src={youtube} alt=""/></a>
         </div>
