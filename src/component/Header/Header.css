@@ -19,3 +19,14 @@
     
     
 }
+@media only screen and (max-width: 768px) {
+    .img-bg{
+        height: 170px;
+        
+    }
+    .img-bg h2{
+        font-size: 40px;
+        color: whitesmoke;
+        text-align: center;
+    }
+}

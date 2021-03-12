@@ -1,11 +1,54 @@
+.row-style{
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 15px;
+    background-image: linear-gradient(to right top, #104e8b, #07559d, #005cb0, #0063c2, #056ad5);
+    border-radius: 10px;
+
+}
+
 .club-detail{
+    color: white;
+    line-height: 15px;
+}
+.setColor{
+    color: white;
+    text-align: left;
     
 }
 .details{
-    background-color: white;
+    
     text-align: center;
     line-height: 20px;
 }
-.description{
-    background-color: white;
+.description p{
+    color: rgb(235, 228, 228);
+    margin-top: 25px;
+    text-align: justify;
+}
+.social-link{
+    padding-left: 44%; 
+    padding-bottom: 60px;
+}
+
+.social-link a img{
+    margin-left: 20px;
+    display: inline-block;
+    height: 30px; 
+}
+
+
+.row-style:hover{
+    background-image: linear-gradient(to right top, #197de2, #197de2, #3185da, #3088e0, #3088e0);
+}
+@media only screen and (max-width: 768px){
+    .breckpiont{
+        
+    }
+    .setColor{
+        text-align: center;
+    }
+    .details{
+        padding-top: 15px;
+    }
 }

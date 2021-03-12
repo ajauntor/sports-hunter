@@ -3,6 +3,11 @@ import { useParams } from 'react-router';
 import './ClubDetail.css'
 import male from '../../images/male.png'
 import female from '../../images/female.png'
+import twitter from '../../images/social1.png'
+import youtube from '../../images/social2.png'
+import website from '../../images/social3.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFutbol, faGlobeAmericas, faMapMarker } from '@fortawesome/free-solid-svg-icons'
 
 const ClubDetail = () => {
     const { clubId } = useParams();
@@ -16,21 +21,22 @@ const ClubDetail = () => {
 
 
 
-    const {strTeamBanner, strGender, strTeamLogo,strCountry, strTeam,strSport, intFormedYear, strStadiumDescription, strDescriptionEN,  } = clubs;
+    const {strTeamBanner, strGender, strTeamLogo,strCountry, strTeam,strSport, intFormedYear, strStadiumDescription, strDescriptionEN,strTwitter, strYoutube, strFacebook  } = clubs;
+
     const gender = (strGender === 'female')? female:male;
 
     return (
         <div>
-            <div className="club-detail container">
+            <div className="club-detail">
             <img style={{width:"100%"}} src={strTeamBanner} alt="" />
         </div>
-      <div className="row">
+      <div className="row container row-style">
 
-            <div className="col-md-4 details">
-                <h5>{strSport}</h5>
-                <h6>{strTeam}</h6>
-                <p>Founded : {intFormedYear}</p>
-                <p>Country : {strCountry}</p>
+            <div className="col-md-4 details breckpiont">
+                <h4 style={{letterSpacing:'5px', fontVariant:'small-caps'}} className="setColor"> {strSport}</h4>
+                <p className="setColor"><FontAwesomeIcon icon={faFutbol} /> {strTeam}</p>
+                <p className="setColor"> <FontAwesomeIcon icon={faMapMarker} /> Founded : {intFormedYear}</p>
+                <p className="setColor"><FontAwesomeIcon icon={faGlobeAmericas} /> Country : {strCountry}</p>
                  
             </div>
             <div className="col-md-4 details">
@@ -38,13 +44,22 @@ const ClubDetail = () => {
             </div>
 
             <div className="col-md-4 details">
-            <img style={{height:"100px"}} src={gender} alt=""/>
+            <img style={{height:"100px", borderRadius:'8px', verticalAlign:'center'}} src={gender} alt=""/>
             </div>
       </div>
-        <div className="description">
+        <div className="description container">
              <p>{strDescriptionEN}</p>
             <p>{strStadiumDescription}</p>
         </div>
+
+        <div className="social-link">
+
+                <a className="socials" target="_blank"  href={`https://${strFacebook}`}><img src={website} alt=""/></a>
+
+                <a className="socials" target="_blank"  href={`https://${strTwitter}`}> <img src={twitter} alt=""/></a>
+                <a className="socials" target="_blank"  href={`https://${strYoutube}`}><img src={youtube} alt=""/></a>
+        </div>
+
         </div>
     )     
 };
