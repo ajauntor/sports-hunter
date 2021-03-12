@@ -16,27 +16,35 @@ const ClubDetail = () => {
 
 
 
-    const {strTeamBanner, strGender, strTeamBadge, } = clubs;
+    const {strTeamBanner, strGender, strTeamLogo,strCountry, strTeam,strSport, intFormedYear, strStadiumDescription, strDescriptionEN,  } = clubs;
     const gender = (strGender === 'female')? female:male;
 
     return (
         <div>
-            <div className="club-detail">
+            <div className="club-detail container">
             <img style={{width:"100%"}} src={strTeamBanner} alt="" />
         </div>
       <div className="row">
-            <div className="col-md-4">
-                <h5>Premier League</h5>
-               
+
+            <div className="col-md-4 details">
+                <h5>{strSport}</h5>
+                <h6>{strTeam}</h6>
+                <p>Founded : {intFormedYear}</p>
+                <p>Country : {strCountry}</p>
+                 
             </div>
-            <div className="col-md-4">
-                <img style={{width:"100px"}} src={strTeamBadge} alt=""/>
+            <div className="col-md-4 details">
+            <img style={{height:"100px"}} src={strTeamLogo} alt=""/>
             </div>
 
-            <div className="col-md-4">
+            <div className="col-md-4 details">
             <img style={{height:"100px"}} src={gender} alt=""/>
             </div>
       </div>
+        <div className="description">
+             <p>{strDescriptionEN}</p>
+            <p>{strStadiumDescription}</p>
+        </div>
         </div>
     )     
 };
