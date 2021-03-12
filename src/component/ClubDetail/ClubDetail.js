@@ -7,7 +7,7 @@ import twitter from '../../images/social1.png'
 import youtube from '../../images/social2.png'
 import website from '../../images/social3.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFutbol, faGlobeAmericas, faMapMarker } from '@fortawesome/free-solid-svg-icons'
+import { faFutbol, faGlobeAmericas, faMapMarker, faTransgender } from '@fortawesome/free-solid-svg-icons'
 
 const ClubDetail = () => {
     const { clubId } = useParams();
@@ -37,6 +37,7 @@ const ClubDetail = () => {
                 <p className="setColor"><FontAwesomeIcon icon={faFutbol} /> {strTeam}</p>
                 <p className="setColor"> <FontAwesomeIcon icon={faMapMarker} /> Founded : {intFormedYear}</p>
                 <p className="setColor"><FontAwesomeIcon icon={faGlobeAmericas} /> Country : {strCountry}</p>
+                <p className="setColor"><FontAwesomeIcon icon={faTransgender} /> Gender : {strGender}</p>
                  
             </div>
             <div className="col-md-4 details">
